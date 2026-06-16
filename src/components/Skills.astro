@@ -1,0 +1,15 @@
+---
+const skills = [
+  "Video Editing", "Short-Form / Reels", "Animation", "Sounddesign",
+  "Audioschnitt", "Color Grading", "Voiceover / Einsprechen",
+  "Konzeption", "Storytelling", "Untertitel / Motion",
+];
+---
+<section id="skills" class="mx-auto max-w-5xl px-6 py-20">
+  <p class="reveal mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-faint">Was ich kann</p>
+  <div class="flex flex-wrap gap-3">
+    {skills.map((s) => (
+      <span class="reveal rounded-full border border-line px-4 py-2 text-sm font-semibold transition-colors hover:border-violet hover:text-violet">{s}</span>
+    ))}
+  </div>
+</section>
