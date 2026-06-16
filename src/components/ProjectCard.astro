@@ -12,7 +12,7 @@ const bars = [40, 70, 100, 60, 85, 45, 75, 55, 90, 35, 65, 50, 80, 42, 68];
   <div class="relative h-[260px] w-[230px] overflow-hidden rounded-3xl bg-gradient shadow-xl shadow-violet/20 transition-transform duration-500 sm:w-[260px]">
     {isAudio ? (
       <div class="flex h-full flex-col justify-between p-5 text-white">
-        <span class="text-2xl">🎧</span>
+        <span class="text-2xl" aria-hidden="true">🎧</span>
         <div class="flex h-10 items-center gap-[3px]">
           {bars.map((h) => (
             <span class="flex-1 rounded-sm bg-white/80" style={`height:${h}%`}></span>
@@ -21,7 +21,7 @@ const bars = [40, 70, 100, 60, 85, 45, 75, 55, 90, 35, 65, 50, 80, 42, 68];
       </div>
     ) : (
       <div class="absolute inset-0 flex items-center justify-center">
-        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-xl text-violet">▶</span>
+        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-xl text-violet" aria-hidden="true">▶</span>
       </div>
     )}
     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/45 to-transparent p-5 text-white">
