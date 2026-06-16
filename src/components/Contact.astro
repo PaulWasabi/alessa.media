@@ -1,0 +1,21 @@
+---
+const socials = [
+  { label: "Instagram", href: "#" },
+  { label: "TikTok", href: "#" },
+  { label: "YouTube", href: "#" },
+  { label: "LinkedIn", href: "#" },
+];
+const email = "hallo@alessa.media";
+---
+<section id="contact" class="bg-gradient text-white">
+  <div class="mx-auto max-w-5xl px-6 py-24 text-center">
+    <h2 class="reveal text-3xl font-extrabold tracking-tight sm:text-4xl">Lust auf Zusammenarbeit?</h2>
+    <p class="reveal mt-3 text-base opacity-90">Erzähl mir von deinem Projekt.</p>
+    <a href={`mailto:${email}`} class="reveal mt-7 inline-block rounded-full bg-white px-7 py-3 text-sm font-bold text-ink transition-transform hover:scale-[1.03]">{email}</a>
+    <ul class="reveal mt-7 flex flex-wrap justify-center gap-5 text-sm opacity-90">
+      {socials.map((s) => (
+        <li><a href={s.href} class="underline-offset-4 hover:underline">{s.label}</a></li>
+      ))}
+    </ul>
+  </div>
+</section>

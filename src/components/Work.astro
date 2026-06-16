@@ -1,0 +1,37 @@
+---
+import { projects, categoryLabels, type Category } from "../data/projects";
+import ProjectCard from "./ProjectCard.astro";
+const chips: (Category | "all")[] = ["all", "social", "film", "audio"];
+---
+<section id="work" class="overflow-hidden py-20">
+  <div class="mx-auto max-w-5xl px-6">
+    <p class="reveal mb-6 text-center text-xs font-semibold uppercase tracking-[0.2em] text-faint">Ausgewählte Arbeiten</p>
+    <div class="reveal mb-10 flex flex-wrap justify-center gap-2" id="work-filters">
+      {chips.map((c, i) => (
+        <button
+          class:list={["filter-chip rounded-full px-4 py-2 text-sm font-semibold transition-colors", i === 0 ? "is-active bg-gradient text-white" : "border border-line"]}
+          data-filter={c}
+          type="button"
+          aria-pressed={i === 0 ? "true" : "false"}
+        >{categoryLabels[c]}</button>
+      ))}
+    </div>
+  </div>
+
+  <div
+    id="work-track"
+    class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-[calc(50%-130px)] pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+  >
+    {projects.map((p) => <ProjectCard project={p} />)}
+  </div>
+
+  <div class="mx-auto mt-2 flex max-w-5xl items-center justify-center gap-5 px-6">
+    <button id="work-prev" type="button" aria-label="Vorheriges Projekt" class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-violet transition-colors hover:bg-surface">‹</button>
+    <button id="work-next" type="button" aria-label="Nächstes Projekt" class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-violet transition-colors hover:bg-surface">›</button>
+  </div>
+</section>
+
+<script>
+  import { initCarousel } from "../scripts/carousel.ts";
+  initCarousel();
+</script>
