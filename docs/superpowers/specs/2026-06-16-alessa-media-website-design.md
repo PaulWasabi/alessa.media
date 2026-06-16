@@ -128,8 +128,15 @@ Kurzer, persönlicher Text (1–3 Sätze) + Bild oder farbiger Avatar-Block. Inh
 
 ---
 
-## 10. Nächste Schritte
+## 10. Technischer Stack (entschieden 2026-06-16)
 
-1. **Technisches Setup** (Framework/Tooling) — eigene Entscheidung in der nächsten Phase.
-2. **Implementierungsplan** (writing-plans).
-3. **Bau** der Seite.
+- **Astro** — statische, schnelle Ausgabe; Projekte als Datendatei (leicht pflegbar).
+- **Tailwind CSS** — helles, rundes Design-System.
+- **GSAP + ScrollTrigger** — Scroll-Animationen & filterbares Karussell; respektiert `prefers-reduced-motion`.
+- **Hosting:** GitHub Pages aus dem Repo `PaulWasabi/alessa.media`.
+- Kein Backend (siehe §8).
+
+## 11. Nächste Schritte
+
+1. **Implementierungsplan** (writing-plans).
+2. **Bau** der Seite.
