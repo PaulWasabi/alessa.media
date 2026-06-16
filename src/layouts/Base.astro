@@ -25,5 +25,9 @@ const {
   </head>
   <body class="bg-white text-ink antialiased">
     <slot />
+    <script>
+      import { initReveal } from "../scripts/reveal.ts";
+      initReveal();
+    </script>
   </body>
 </html>

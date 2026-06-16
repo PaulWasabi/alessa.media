@@ -16,6 +16,7 @@
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
     "@tailwindcss/vite": "^4.3.1",
     "astro": "^6.4.7",
+    "gsap": "^3.15.0",
     "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
