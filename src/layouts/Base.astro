@@ -1,0 +1,29 @@
+---
+import "@fontsource-variable/plus-jakarta-sans";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = "alessa media — Freelance Video & Audio Editor",
+  description = "Schnitt, der hängen bleibt. Shorts, YouTube, Werbung & Podcasts für Creator und Marken.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <script is:inline>
+      document.documentElement.classList.remove("no-js");
+    </script>
+  </head>
+  <body class="bg-white text-ink antialiased">
+    <slot />
+  </body>
+</html>
