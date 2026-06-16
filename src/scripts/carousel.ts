@@ -43,11 +43,19 @@ export function initCarousel(): void {
       chip.classList.toggle("text-white", active);
       chip.classList.toggle("border", !active);
       chip.classList.toggle("border-line", !active);
+      chip.setAttribute("aria-pressed", active ? "true" : "false");
     });
 
     cards().forEach((card) => {
       const show = filter === "all" || card.dataset.category === filter;
       card.hidden = !show;
+      if (!show) {
+        const inner = card.querySelector<HTMLElement>(":scope > div");
+        if (inner) {
+          inner.style.transform = "";
+          inner.style.opacity = "";
+        }
+      }
     });
     track.scrollTo({ left: 0, behavior: "smooth" });
   });
