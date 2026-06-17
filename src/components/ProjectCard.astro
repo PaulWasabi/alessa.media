@@ -6,10 +6,20 @@ const isAudio = project.category === "audio";
 const bars = [40, 70, 100, 60, 85, 45, 75, 55, 90, 35, 65, 50, 80, 42, 68];
 ---
 <article
-  class="project-card group shrink-0 snap-center"
+  class="project-card group shrink-0 cursor-pointer snap-center"
   data-category={project.category}
+  data-client={project.client}
+  data-title={project.title}
+  data-services={project.services.join("|")}
+  data-description={project.description ?? ""}
+  data-link-url={project.link?.url ?? ""}
+  data-link-label={project.link?.label ?? ""}
+  role="button"
+  tabindex="0"
+  aria-haspopup="dialog"
+  aria-label={`Projekt öffnen: ${project.title}`}
 >
-  <div class="relative h-[260px] w-[230px] overflow-hidden rounded-3xl bg-gradient shadow-xl shadow-violet/20 transition-transform duration-500 sm:w-[260px]">
+  <div class="card-visual relative h-[260px] w-[230px] overflow-hidden rounded-3xl bg-gradient shadow-xl shadow-violet/20 transition-transform duration-500 group-hover:-translate-y-1 sm:w-[260px]">
     {isAudio ? (
       <div class="flex h-full flex-col justify-between p-5 text-white">
         <span class="text-2xl" aria-hidden="true">🎧</span>

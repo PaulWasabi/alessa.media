@@ -1,6 +1,7 @@
 ---
 import { projects, categoryLabels, type Category } from "../data/projects";
 import ProjectCard from "./ProjectCard.astro";
+import ProjectModal from "./ProjectModal.astro";
 const chips: (Category | "all")[] = ["all", "social", "film", "audio"];
 ---
 <section id="work" class="overflow-hidden py-20">
@@ -30,6 +31,8 @@ const chips: (Category | "all")[] = ["all", "social", "film", "audio"];
     <button id="work-next" type="button" aria-label="Nächstes Projekt" class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-violet transition-colors hover:bg-surface">›</button>
   </div>
 </section>
+
+<ProjectModal />
 
 <script>
   import { initCarousel } from "../scripts/carousel.ts";

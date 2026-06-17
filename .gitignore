@@ -6,3 +6,7 @@ dist/
 
 # astro
 .astro/
+
+# local test/screenshot artifacts
+.playwright-mcp/
+/*.png
