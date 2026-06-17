@@ -4,37 +4,43 @@ const fmt = new Intl.NumberFormat("de-DE");
 // Build-time fallback value (no-JS); the client recomputes & animates on load.
 const now = Date.now();
 ---
-<section id="top" class="mx-auto max-w-5xl px-6 pb-20 pt-16 text-center sm:pt-24">
-  <p class="reveal mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-faint">
-    Freelance Video &amp; Audio Editor
-  </p>
-  <h1 class="reveal text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl">
-    <span class="text-gradient">Ideen in<br />Bewegung.</span>
-  </h1>
-  <p class="reveal mx-auto mt-6 max-w-md text-base leading-relaxed text-muted">
-    Ich schneide Shorts, YouTube, Werbung &amp; Podcasts — für Creator und Marken, die auffallen wollen.
-  </p>
+<section id="top" class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-20 text-center">
+  <canvas id="hero-net" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
 
-  <div class="reveal mt-10 flex flex-wrap items-start justify-center gap-x-8 gap-y-6 sm:gap-x-14">
-    {stats.map((s) => (
-      <div class="min-w-[90px]">
-        <span
-          class="stat-value block text-4xl font-extrabold tracking-tight text-ink sm:text-5xl"
-          data-base={s.base}
-          data-perweek={s.perWeek}
-        >{fmt.format(currentStatValue(s, now))}</span>
-        <span class="mt-1 block text-[11px] font-semibold uppercase tracking-wider text-faint">{s.label}</span>
-      </div>
-    ))}
-  </div>
+  <div class="relative z-10 mx-auto max-w-5xl">
+    <p class="reveal mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-faint">
+      Freelance Video &amp; Audio Editor
+    </p>
+    <h1 class="reveal text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl">
+      <span class="text-gradient">Ideen in<br />Bewegung.</span>
+    </h1>
+    <p class="reveal mx-auto mt-6 max-w-md text-base leading-relaxed text-muted">
+      Ich schneide Shorts, YouTube, Werbung &amp; Podcasts — für Creator und Marken, die auffallen wollen.
+    </p>
 
-  <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
-    <a href="#work" class="rounded-full bg-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03]">▶ Showreel</a>
-    <a href="#work" class="rounded-full border border-line px-6 py-3 text-sm font-semibold transition-colors hover:bg-surface">Projekte ansehen</a>
+    <div class="reveal mt-10 flex flex-wrap items-start justify-center gap-x-8 gap-y-6 sm:gap-x-14">
+      {stats.map((s) => (
+        <div class="min-w-[90px]">
+          <span
+            class="stat-value block text-4xl font-extrabold tracking-tight text-ink sm:text-5xl"
+            data-base={s.base}
+            data-perweek={s.perWeek}
+          >{fmt.format(currentStatValue(s, now))}</span>
+          <span class="mt-1 block text-[11px] font-semibold uppercase tracking-wider text-faint">{s.label}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal mt-10 flex flex-wrap justify-center gap-3">
+      <a href="#work" class="rounded-full bg-gradient px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.03]">▶ Showreel</a>
+      <a href="#work" class="rounded-full border border-line bg-white/70 px-6 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-surface">Projekte ansehen</a>
+    </div>
   </div>
 </section>
 
 <script>
   import { initCounters } from "../scripts/counter.ts";
+  import { initHeroNetwork } from "../scripts/hero-network.ts";
   initCounters();
+  initHeroNetwork();
 </script>
