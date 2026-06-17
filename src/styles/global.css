@@ -51,3 +51,16 @@ html {
   outline-offset: 2px;
   border-radius: 999px;
 }
+
+/* Full-viewport scroll-snap panels.
+   Desktop only (needs enough height); on mobile the page scrolls normally
+   so tall content is never cut off. */
+.snap-panel { min-height: 100vh; }
+
+@media (min-width: 768px) and (min-height: 640px) {
+  html { scroll-snap-type: y mandatory; }
+  .snap-panel {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
