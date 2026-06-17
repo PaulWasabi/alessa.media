@@ -5,27 +5,14 @@ export function initCarousel(): void {
   const next = document.getElementById("work-next");
   if (!track || !filters) return;
 
-  const cards = () =>
-    Array.from(track.querySelectorAll<HTMLElement>(".project-card"));
+  const GAP = 20; // matches gap-5 on the track
 
-  // --- active-card scaling via IntersectionObserver ---
-  const io = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        const inner = entry.target.querySelector<HTMLElement>(":scope > div");
-        if (!inner) continue;
-        inner.style.transform = entry.intersectionRatio > 0.75 ? "scale(1)" : "scale(0.88)";
-        inner.style.opacity = entry.intersectionRatio > 0.4 ? "1" : "0.55";
-      }
-    },
-    { root: track, threshold: [0, 0.4, 0.75, 1] },
-  );
-  cards().forEach((c) => io.observe(c));
+  const cards = () => Array.from(track.querySelectorAll<HTMLElement>(".project-card"));
 
-  // --- prev / next ---
+  // --- prev / next: advance by one card width ---
   const step = () => {
     const first = cards().find((c) => !c.hidden);
-    return first ? first.offsetWidth + 24 : 280;
+    return first ? first.offsetWidth + GAP : 300;
   };
   prev?.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
   next?.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
@@ -47,15 +34,7 @@ export function initCarousel(): void {
     });
 
     cards().forEach((card) => {
-      const show = filter === "all" || card.dataset.category === filter;
-      card.hidden = !show;
-      if (!show) {
-        const inner = card.querySelector<HTMLElement>(":scope > div");
-        if (inner) {
-          inner.style.transform = "";
-          inner.style.opacity = "";
-        }
-      }
+      card.hidden = !(filter === "all" || card.dataset.category === filter);
     });
     track.scrollTo({ left: 0, behavior: "smooth" });
   });

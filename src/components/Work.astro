@@ -19,16 +19,18 @@ const chips: (Category | "all")[] = ["all", "social", "film", "audio"];
     </div>
   </div>
 
-  <div
-    id="work-track"
-    class="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth [justify-content:safe_center] px-6 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-  >
-    {projects.map((p) => <ProjectCard project={p} />)}
+  <div class="mx-auto max-w-6xl">
+    <div
+      id="work-track"
+      class="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth scroll-pl-6 px-6 pb-6 [justify-content:safe_center] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:scroll-pl-8 sm:px-8"
+    >
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
   </div>
 
-  <div class="mx-auto mt-2 flex max-w-5xl items-center justify-center gap-5 px-6">
-    <button id="work-prev" type="button" aria-label="Vorheriges Projekt" class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-violet transition-colors hover:bg-surface">‹</button>
-    <button id="work-next" type="button" aria-label="Nächstes Projekt" class="flex h-10 w-10 items-center justify-center rounded-full border border-line text-violet transition-colors hover:bg-surface">›</button>
+  <div class="mt-4 flex items-center justify-center gap-5">
+    <button id="work-prev" type="button" aria-label="Vorherige Projekte" class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient text-lg text-white shadow-lg shadow-violet/25 transition-transform hover:scale-105 active:scale-95">‹</button>
+    <button id="work-next" type="button" aria-label="Weitere Projekte" class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient text-lg text-white shadow-lg shadow-violet/25 transition-transform hover:scale-105 active:scale-95">›</button>
   </div>
 </section>
 
