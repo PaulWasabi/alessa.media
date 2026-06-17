@@ -52,6 +52,25 @@ html {
   border-radius: 999px;
 }
 
+/* Active nav link (scroll-spy) */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-link.is-active {
+  color: var(--color-ink);
+}
+.nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient);
+}
+
 /* Full-viewport scroll-snap panels.
    Desktop only (needs enough height); on mobile the page scrolls normally
    so tall content is never cut off. */

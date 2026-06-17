@@ -9,11 +9,16 @@ const links = [
 <header class="sticky top-0 z-50 border-b border-line/80 bg-white/85 backdrop-blur">
   <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
     <a href="#top" class="text-lg font-extrabold tracking-tight">alessa media</a>
-    <ul class="hidden gap-6 text-sm font-medium text-muted sm:flex">
+    <ul id="nav-links" class="hidden gap-6 text-sm font-medium text-muted sm:flex">
       {links.map((l) => (
-        <li><a href={l.href} class="transition-colors hover:text-ink">{l.label}</a></li>
+        <li><a href={l.href} class="nav-link transition-colors hover:text-ink">{l.label}</a></li>
       ))}
     </ul>
     <a href="#contact" class="rounded-full bg-gradient px-4 py-2 text-sm font-semibold text-white sm:hidden">Kontakt</a>
   </nav>
 </header>
+
+<script>
+  import { initScrollSpy } from "../scripts/scroll-spy.ts";
+  initScrollSpy();
+</script>
