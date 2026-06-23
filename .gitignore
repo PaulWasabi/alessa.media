@@ -1,12 +1,8 @@
-.superpowers/
-node_modules/
-dist/
+# OS
 .DS_Store
-*.log
 
-# astro
-.astro/
+# Local agent / editor config
+.claude/
 
-# local test/screenshot artifacts
+# Playwright screenshot scratch
 .playwright-mcp/
-/*.png

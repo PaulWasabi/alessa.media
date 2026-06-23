@@ -1,0 +1,189 @@
+/* ============================================================
+   alessa media — DESIGN TOKENS
+   Lifted from the alessa-media design system (fonts · colors ·
+   typography · spacing · base helpers). Single source of truth.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap');
+
+:root {
+  /* ---- Brand core ---- */
+  --violet: #7c3aed;
+  --pink:   #ec4899;
+  --amber:  #f59e0b;
+
+  /* ---- Brand tints / shades ---- */
+  --violet-700: #6d28d9;
+  --violet-600: #7c3aed;
+  --violet-500: #8b5cf6;
+  --violet-100: #ede9fe;
+  --violet-050: #f5f3ff;
+  --pink-600: #db2777;
+  --pink-500: #ec4899;
+  --pink-100: #fce7f3;
+  --amber-600: #d97706;
+  --amber-500: #f59e0b;
+  --amber-100: #fef3c7;
+
+  /* ---- Ink / neutral ramp ---- */
+  --ink:     #15103a;  /* primary text — deep violet-black */
+  --muted:   #6b6790;  /* secondary text */
+  --faint:   #a5a1c0;  /* labels, eyebrows, captions */
+  --line:    #f0edf9;  /* hairline borders, dividers */
+  --surface: #fbfafe;  /* offset section / chip background */
+  --white:   #ffffff;
+
+  /* ---- Signature gradients ---- */
+  --gradient:      linear-gradient(110deg, var(--violet), var(--pink) 55%, var(--amber));
+  --gradient-soft: linear-gradient(110deg, var(--violet-050), var(--pink-100) 55%, var(--amber-100));
+  --gradient-vert: linear-gradient(160deg, var(--violet), var(--pink) 60%, var(--amber));
+
+  /* ---- Semantic aliases ---- */
+  --bg-page:        var(--white);
+  --bg-surface:     var(--surface);
+  --bg-accent:      var(--gradient);
+  --text-strong:    var(--ink);
+  --text-body:      var(--muted);
+  --text-label:     var(--faint);
+  --text-on-accent: var(--white);
+  --border-hairline: var(--line);
+  --border-strong:   var(--violet);
+  --ring-focus:      var(--violet);
+
+  /* ---- Typography ---- */
+  --font-display: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body:    "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extra: 800;
+
+  --fs-display: clamp(2.75rem, 1.5rem + 6vw, 4.5rem);
+  --fs-h1:      clamp(2rem, 1.4rem + 3vw, 3rem);
+  --fs-h2:      clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  --fs-h3:      1.25rem;
+  --fs-lead:    1.125rem;
+  --fs-body:    1rem;
+  --fs-sm:      0.875rem;
+  --fs-xs:      0.75rem;
+  --fs-eyebrow: 0.6875rem;
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.15;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.65;
+
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-eyebrow: 0.2em;
+
+  /* ---- Spacing scale (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 5rem;
+  --space-16: 8rem;
+
+  --container:    64rem;   /* 1024 — content max-width */
+  --container-lg: 72rem;   /* 1152 — carousel max-width */
+
+  /* ---- Radii (pill-forward) ---- */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius-pill: 999px;
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+
+  /* ---- Shadows (violet-tinted, soft) ---- */
+  --shadow-sm: 0 1px 2px rgba(21, 16, 58, 0.06);
+  --shadow-md: 0 8px 24px rgba(124, 58, 237, 0.12);
+  --shadow-lg: 0 16px 40px rgba(124, 58, 237, 0.18);
+  --shadow-xl: 0 24px 60px rgba(124, 58, 237, 0.22);
+  --shadow-accent: 0 12px 30px rgba(124, 58, 237, 0.25);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 500ms;
+
+  /* ---- Z-index ---- */
+  --z-nav: 50;
+  --z-modal: 100;
+
+  /* ---- Layout ---- */
+  --nav-h: 71px;   /* sticky nav height — used for full-screen snap sections */
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  font-family: var(--font-body);
+  color: var(--text-strong);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extra);
+  letter-spacing: var(--ls-tight);
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* ---- Signature helpers ---- */
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bg-gradient { background: var(--gradient); }
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-eyebrow);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-eyebrow);
+  color: var(--text-label);
+}
+
+/* ---- Focus ring ---- */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--ring-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-pill);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
