@@ -11,8 +11,7 @@
   /* ---- Data ---------------------------------------------------- */
   var PROJECTS = [
     { id:"stilberater", client:"Stilberater", title:"Social Media Videoproduktion", category:"social", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/stilberater.png", description:"Laufende Social-Media-Betreuung: Konzeption und Schnitt von Shorts und YouTube-Videos, inkl. Animation und Sounddesign." },
-    { id:"tech-ki-schmetterlinge", client:"Sascha Lobo", title:"Tech, KI & Schmetterlinge", category:"audio", services:["Audioschnitt","Sounddesign"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", description:"Audioschnitt und Sounddesign für den Podcast „Tech, KI & Schmetterlinge“ von Sascha Lobo in Zusammenarbeit mit Schwarz Digits." },
-    { id:"plasmazentrum", client:"Plasmazentrum Würzburg", title:"Aufmerksamkeitskampagne", category:"social", services:["Konzeption","Kameraführung","Bildbearbeitung","Videoedit"], thumbnail:"assets/plasmazentrum-wuerzburg.png", description:"Kampagne von der Konzeption über die Kameraführung bis zur Bildbearbeitung und zum finalen Schnitt." },
+    { id:"tech-ki-schmetterlinge", client:"Sascha Lobo", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Audioschnitt","Sounddesign"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", description:"Audioschnitt und Sounddesign für den Podcast „Tech, KI & Schmetterlinge“ von Sascha Lobo in Zusammenarbeit mit Schwarz Digits." },
     { id:"arrow", client:"Arrow", title:"Arrowsphere Teaser Video", category:"film", services:["Videoedit","Animation","Sounddesign","Voiceover"], thumbnail:"assets/arrow.png", description:"Teaser-Video für Arrowsphere: Schnitt, Animation, Sounddesign und Voiceover zu einem prägnanten Produkt-Teaser kombiniert." },
     { id:"deloitte", client:"Deloitte Deutschland", title:"Videoreihe „Hidden Movers Award“", category:"film", services:["Videoedit"], thumbnail:"assets/deloitte.png", description:"Schnitt einer mehrteiligen Videoreihe rund um den Hidden Movers Award." },
     { id:"giz", client:"Giz", title:"„My Region is the Lab“", category:"film", services:["Videoedit"], thumbnail:"assets/giz.png", description:"Schnitt einer Kurzdokumentation über regionale Innovationsprojekte." },
@@ -38,6 +37,13 @@
   var state = { filter: "all", nearest: 0 };
 
   /* ---- Helpers ------------------------------------------------- */
+  /* category kann ein String oder ein Array mehrerer Kategorien sein */
+  function hasCategory(p, key) {
+    return Array.isArray(p.category) ? p.category.indexOf(key) !== -1 : p.category === key;
+  }
+  function primaryCategory(p) {
+    return Array.isArray(p.category) ? p.category[0] : p.category;
+  }
   function el(tag, cls, attrs) {
     var n = document.createElement(tag);
     if (cls) n.className = cls;
@@ -61,7 +67,7 @@
     var visual = el("div", "pc-visual");
     if (p.thumbnail) visual.style.backgroundImage = "url(" + p.thumbnail + ")";
 
-    if (p.category === "audio") {
+    if (hasCategory(p, "audio")) {
       var wfWrap = el("div", "pc-waveform");
       var wf = el("div", "waveform");
       for (var i = 0; i < WAVE_BARS.length; i++) {
@@ -106,7 +112,7 @@
   function renderCards() {
     var shown = state.filter === "all"
       ? PROJECTS
-      : PROJECTS.filter(function (p) { return p.category === state.filter; });
+      : PROJECTS.filter(function (p) { return hasCategory(p, state.filter); });
     track.innerHTML = "";
     shown.forEach(function (p) { track.appendChild(buildCard(p)); });
     track.scrollLeft = 0;
@@ -179,7 +185,7 @@
     var ctaBox = document.getElementById("modal-cta");
     ctaBox.innerHTML = "";
     if (p.url) {
-      var label = p.cta || CTA_LABEL[p.category] || "Projekt ansehen";
+      var label = p.cta || CTA_LABEL[primaryCategory(p)] || "Projekt ansehen";
       var a = el("a", "btn btn--primary", { href: p.url, target: "_blank", rel: "noopener noreferrer" });
       a.innerHTML = label + externalIcon();
       ctaBox.appendChild(a);
