@@ -370,7 +370,7 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
 .modal__title { font-family: var(--font-display); font-weight: var(--fw-extra); font-size: 28px; letter-spacing: -0.02em; line-height: 1.12; margin: 8px 0 0; padding-right: 24px; color: var(--ink); }
 .modal__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .modal__desc { margin-top: 20px; line-height: 1.65; color: var(--muted); }
-.modal__cta { margin-top: 24px; }
+.modal__cta { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 10px; }
 .modal__cta:empty { display: none; }
 
 /* ---------------------------------------------------------------

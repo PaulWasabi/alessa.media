@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum — alessa media</title>
+  <meta name="description" content="Impressum und Anbieterkennzeichnung von alessa media.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .legal { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+    .legal__back { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-sm); color: var(--muted); margin-bottom: 32px; }
+    .legal__back:hover { color: var(--ink); }
+    .legal h1 { font-size: clamp(32px, 6vw, 48px); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 40px; }
+    .legal h2 { font-size: var(--fs-body); font-weight: 700; margin: 36px 0 10px; }
+    .legal p { color: var(--muted); line-height: 1.75; }
+    .legal address { font-style: normal; color: var(--muted); line-height: 1.75; }
+    .legal__note { margin-top: 48px; padding: 16px 18px; border: 1px dashed var(--border-hairline); border-radius: 12px; font-size: var(--fs-sm); }
+    .legal__footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border-hairline); font-size: var(--fs-sm); color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <nav class="nav__inner" aria-label="Hauptnavigation">
+      <a href="index.html" class="nav__brand">alessa media</a>
+      <a href="index.html#contact" class="btn btn--primary btn--sm nav__cta">Kontakt</a>
+    </nav>
+  </header>
+
+  <main class="legal">
+    <a href="index.html" class="legal__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Zurück zur Startseite
+    </a>
+
+    <h1>Impressum</h1>
+
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <address>
+      Alessa Wieler<br>
+      Musterstraße 1<br>
+      80331 München<br>
+      Deutschland
+    </address>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail:
+      <a href="#" id="legal-mail" data-mail-user="alessa.wieler" data-mail-host="icloud.com">E-Mail-Adresse anzeigen</a>
+    </p>
+
+    <h2>Umsatzsteuer-Identifikationsnummer</h2>
+    <p>Gemäß § 27 a Umsatzsteuergesetz: DE000000000</p>
+
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <address>
+      Alessa Wieler<br>
+      Musterstraße 1<br>
+      80331 München
+    </address>
+
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieterin bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieterin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+    <h2>Haftung für Links</h2>
+    <p>Dieses Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+    <h2>Urheberrecht</h2>
+    <p>Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung.</p>
+
+    <div class="legal__note">
+      <strong>Hinweis:</strong> Name, Anschrift und USt-IdNr. sind Platzhalter und müssen vor dem öffentlichen Betrieb durch die echten Angaben ersetzt werden.
+    </div>
+
+    <p class="legal__footer">© <span id="year"></span> alessa media · <a href="index.html">Startseite</a></p>
+  </main>
+
+  <script>
+    (function () {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      var link = document.getElementById("legal-mail");
+      if (!link) return;
+      var addr = link.getAttribute("data-mail-user") + "@" + link.getAttribute("data-mail-host");
+      link.setAttribute("href", "mailto:" + addr);
+      link.textContent = addr;
+    })();
+  </script>
+
+</body>
+</html>

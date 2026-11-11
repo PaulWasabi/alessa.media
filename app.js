@@ -10,15 +10,15 @@
 
   /* ---- Data ---------------------------------------------------- */
   var PROJECTS = [
-    { id:"stilberater", client:"Stilberater", title:"Social Media Videoproduktion", category:"social", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/stilberater.png", description:"Laufende Social-Media-Betreuung: Konzeption und Schnitt von Shorts und YouTube-Videos, inkl. Animation und Sounddesign." },
-    { id:"tech-ki-schmetterlinge", client:"Sascha Lobo", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Audioschnitt","Sounddesign"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", description:"Audioschnitt und Sounddesign für den Podcast „Tech, KI & Schmetterlinge“ von Sascha Lobo in Zusammenarbeit mit Schwarz Digits." },
+    { id:"stilberater", client:"Stilberater", title:"Social Media Video Production", category:"social", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/stilberater.png", url:"https://www.youtube.com/", cta:"Zum YouTube-Kanal", description:"Laufende Social-Media-Betreuung: Konzeption und Schnitt von Shorts und YouTube-Videos, inkl. Animation und Sounddesign." },
+    { id:"tech-ki-schmetterlinge", client:"Schwarz Digits", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Audioschnitt","Sounddesign"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", links:[{ label:"Instagram", url:"https://www.instagram.com/" }], description:"Audioschnitt und Sounddesign für den Podcast „Tech, KI & Schmetterlinge“ von Sascha Lobo in Zusammenarbeit mit Schwarz Digits." },
+    { id:"prismasuite", client:"Prismasuite", title:"VLC Produktion", category:"film", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/prismasuite.png", description:"Produktion inkl. Schnitt, Animation und Sounddesign für Prismasuite." },
     { id:"arrow", client:"Arrow", title:"Arrowsphere Teaser Video", category:"film", services:["Videoedit","Animation","Sounddesign","Voiceover"], thumbnail:"assets/arrow.png", description:"Teaser-Video für Arrowsphere: Schnitt, Animation, Sounddesign und Voiceover zu einem prägnanten Produkt-Teaser kombiniert." },
     { id:"deloitte", client:"Deloitte Deutschland", title:"Videoreihe „Hidden Movers Award“", category:"film", services:["Videoedit"], thumbnail:"assets/deloitte.png", description:"Schnitt einer mehrteiligen Videoreihe rund um den Hidden Movers Award." },
     { id:"giz", client:"Giz", title:"„My Region is the Lab“", category:"film", services:["Videoedit"], thumbnail:"assets/giz.png", description:"Schnitt einer Kurzdokumentation über regionale Innovationsprojekte." },
     { id:"rkw", client:"RKW", title:"Social Entrepreneurship — Behind the Scenes", category:"film", services:["Videoedit"], thumbnail:"assets/rkw.jpg", description:"Behind-the-Scenes-Videoreihe zum Thema Social Entrepreneurship." },
     { id:"techfounders", client:"Techfounders", title:"Demo Day Teaser", category:"film", services:["Videoedit"], thumbnail:"assets/techfounders.jpg", description:"Energiegeladener Teaser zum Demo Day mit pointiertem Schnitt." },
     { id:"munich", client:"Munich Business", title:"Social Innovation Strategy", category:"film", services:["Videoedit"], description:"Videoproduktion zur Social Innovation Strategy." },
-    { id:"prismasuite", client:"Prismasuite", title:"VLC Produktion", category:"film", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/prismasuite.png", description:"Produktion inkl. Schnitt, Animation und Sounddesign für Prismasuite." },
     { id:"forstory", client:"forstory", title:"Impact Film Production", category:"film", services:["Videoedit"], thumbnail:"assets/forstory.png", description:"Schnitt einer Impact-orientierten Filmproduktion." },
     { id:"bundespolizei", client:"Bundespolizei", title:"„Gefahren am Bahnsteig“", category:"film", services:["Konzeption","Videoedit"], description:"Konzeption und Schnitt einer Aufklärungskampagne zu Gefahren am Bahnsteig." },
     { id:"cisco", client:"Cisco", title:"Podcast „Zukunft Verstehen“", category:"audio", services:["Texten","Einsprechen"], thumbnail:"assets/cisco-zukunft-verstehen.png", url:"https://www.cisco.com/c/de_de/solutions/executive-perspectives/podcasts.html", description:"Mitarbeit am Podcast „Zukunft Verstehen“: Texten und Einsprechen von Beiträgen." },
@@ -190,6 +190,14 @@
       a.innerHTML = label + externalIcon();
       ctaBox.appendChild(a);
     }
+    /* Optionale Zweitlinks (z. B. Instagram zusaetzlich zum Spotify-Link) */
+    if (p.links) {
+      p.links.forEach(function (l) {
+        var s = el("a", "btn btn--secondary", { href: l.url, target: "_blank", rel: "noopener noreferrer" });
+        s.innerHTML = l.label + externalIcon();
+        ctaBox.appendChild(s);
+      });
+    }
     modal.classList.add("is-open");
     document.body.style.overflow = "hidden";
   }
@@ -271,6 +279,19 @@
   }
 
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* Mailto erst zur Laufzeit zusammensetzen, damit die Adresse nicht im
+     ausgelieferten HTML steht und von Harvestern nicht gelesen wird. */
+  (function initMailLink() {
+    var link = document.getElementById("mail-link");
+    if (!link) return;
+    var user = link.getAttribute("data-mail-user");
+    var host = link.getAttribute("data-mail-host");
+    if (!user || !host) return;
+    link.setAttribute("href", "mailto:" + user + "@" + host);
+    link.setAttribute("title", "E-Mail an " + user + "@" + host);
+  })();
+
   renderChips();
   renderCards();
   initReveal();
