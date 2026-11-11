@@ -199,7 +199,7 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
    --------------------------------------------------------------- */
 .work { padding: 92px 0 100px; background: var(--white); }
 .work__glow { top: 0; left: 50%; transform: translateX(-50%); width: 820px; height: 360px; filter: blur(150px); opacity: 0.12; }
-.work__head { position: relative; z-index: 1; }
+.work__head { position: relative; z-index: 1; text-align: center; }
 .chips { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 36px; }
 
 .track-wrap {
@@ -220,7 +220,9 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
   will-change: transform, opacity;
   transition: opacity 0.3s var(--ease-out), transform 0.45s var(--ease-out);
 }
-.work__arrows { display: flex; justify-content: center; gap: 16px; margin-top: 8px; }
+/* Negativer Margin statt kleinerem .track-Padding: das Padding traegt die
+   Schatten und die Scale-Animation der Karten und darf nicht schrumpfen. */
+.work__arrows { position: relative; z-index: 2; display: flex; justify-content: center; gap: 16px; margin-top: -50px; }
 
 /* ProjectCard */
 .project-card { cursor: pointer; width: 100%; }
