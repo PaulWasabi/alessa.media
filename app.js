@@ -10,9 +10,9 @@
 
   /* ---- Data ---------------------------------------------------- */
   var PROJECTS = [
-    { id:"stilberater", client:"Stilberater", title:"Social Media Video Production", category:"social", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/stilberater.png", url:"https://www.youtube.com/@derstilberater", cta:"Zum YouTube-Kanal", description:"Laufende Social-Media-Betreuung: Konzeption und Schnitt von Shorts und YouTube-Videos, inkl. Animation und Sounddesign." },
-    { id:"style-consultant", client:"The Style Consultant", title:"YouTube Video Production (EN)", category:"social", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/style-consultant.jpg", url:"https://www.youtube.com/@TheStyleConsultant", cta:"Zum YouTube-Kanal", description:"Englischsprachiger Kanal des Stilberaters: Schnitt, Animation und Sounddesign für YouTube-Videos rund um Stil und Garderobe." },
-    { id:"tech-ki-schmetterlinge", client:"Schwarz Digits", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Audioschnitt","Sounddesign"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", links:[{ label:"Instagram", url:"https://www.instagram.com/techundschmetterlinge/" }], description:"Audioschnitt und Sounddesign für den Podcast „Tech, KI & Schmetterlinge“ von Sascha Lobo in Zusammenarbeit mit Schwarz Digits." },
+    { id:"stilberater", client:"Der Stilberater", title:"Social Media Video Production", category:"social", services:["Videoedit","Short-Form","Longform"], thumbnail:"assets/stilberater.png", url:"https://www.youtube.com/@derstilberater", cta:"Zum YouTube-Kanal", description:"Als Video Editorin für den Influencer „Der Stilberater“ verantworte ich Short- und Longform-Videos für Instagram, YouTube und TikTok." },
+    { id:"style-consultant", client:"The Style Consultant", title:"YouTube Video Production (EN)", category:"social", services:["Videoedit","Short-Form","Longform"], thumbnail:"assets/style-consultant.jpg", url:"https://www.youtube.com/@TheStyleConsultant", cta:"Zum YouTube-Kanal", description:"Als Video Editorin für The Style Consultant habe ich den englischsprachigen Kanal von Null an mit aufgebaut und ab dem Start Short- und Longform-Videos geschnitten." },
+    { id:"tech-ki-schmetterlinge", client:"Schwarz Digits", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Social Media","Videoedit"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", links:[{ label:"Instagram", url:"https://www.instagram.com/techundschmetterlinge/" }], description:"Als Video Editorin für den Podcast „Tech, KI & Schmetterlinge“ habe ich dessen Social-Media-Präsenz von Beginn an mit aufgebaut." },
     { id:"prismasuite", client:"Prismasuite", title:"VLC Produktion", category:"film", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/prismasuite.png", description:"Produktion inkl. Schnitt, Animation und Sounddesign für Prismasuite." },
     { id:"alles-umami", client:"alles umami", title:"Food-Content für TikTok", category:"social", services:["Konzeption","Videoedit","Sounddesign"], thumbnail:"assets/alles-umami.jpg", url:"https://www.tiktok.com/@alles.umami", cta:"Zum TikTok-Kanal", description:"Laufender Koch-Channel auf TikTok: Konzeption, Schnitt und Sounddesign für Short-Form-Rezeptvideos." },
     { id:"arrow", client:"Arrow", title:"Arrowsphere Teaser Video", category:"film", services:["Videoedit","Animation","Sounddesign","Voiceover"], thumbnail:"assets/arrow.png", description:"Teaser-Video für Arrowsphere: Schnitt, Animation, Sounddesign und Voiceover zu einem prägnanten Produkt-Teaser kombiniert." },
@@ -23,8 +23,8 @@
     { id:"munich", client:"Munich Business", title:"Social Innovation Strategy", category:"film", services:["Videoedit"], description:"Videoproduktion zur Social Innovation Strategy." },
     { id:"forstory", client:"forstory", title:"Impact Film Production", category:"film", services:["Videoedit"], thumbnail:"assets/forstory.png", description:"Schnitt einer Impact-orientierten Filmproduktion." },
     { id:"bundespolizei", client:"Bundespolizei", title:"„Gefahren am Bahnsteig“", category:"film", services:["Konzeption","Videoedit"], description:"Konzeption und Schnitt einer Aufklärungskampagne zu Gefahren am Bahnsteig." },
-    { id:"cisco", client:"Cisco", title:"Podcast „Zukunft Verstehen“", category:"audio", services:["Texten","Einsprechen"], thumbnail:"assets/cisco-zukunft-verstehen.png", url:"https://www.cisco.com/c/de_de/solutions/executive-perspectives/podcasts.html", description:"Mitarbeit am Podcast „Zukunft Verstehen“: Texten und Einsprechen von Beiträgen." },
-    { id:"sascha-lobo", client:"Sascha Lobo", title:"Audioschnittprojekte", category:"audio", services:["Audioschnitt"], thumbnail:"assets/sascha-lobo-pov.png", description:"Audiobearbeitung und Schnitt verschiedener Projekte für Sascha Lobo." }
+    { id:"cisco", client:"Cisco", title:"Zukunft verstehen – Wie Technik die Welt verändert", category:"audio", services:["Einsprechen"], thumbnail:"assets/cisco-zukunft-verstehen.png", url:"https://www.cisco.com/c/de_de/solutions/executive-perspectives/podcasts.html", description:"Sprecherin für den deutschen Tech-Podcast „Zukunft verstehen – Wie Technik die Welt verändert“ von Sascha Lobo & Cisco." },
+    { id:"sascha-lobo", client:"Feel the News (heute „POV“)", title:"Podcast-Produktion", category:"audio", services:["Audioschnitt","Audio Mastering"], thumbnail:"assets/sascha-lobo-pov.png", description:"Als Audio Editorin für den Podcast „Feel the News“ (heute „POV“) war ich für den Schnitt der Folgen verantwortlich — für ein flüssiges Hörerlebnis." }
   ];
 
   var FILTERS = [
@@ -305,17 +305,19 @@
   window.addEventListener("resize", queueCarousel);
   [80, 250, 500, 900].forEach(function (d) { setTimeout(updateCarousel, d); });
 
-  /* ---- Full-page section navigation (desktop) ------------------
-     Any scroll intent — even a tiny one — jumps to the adjacent
-     section. Locked during the animation, and held until trackpad
-     momentum stops, so one gesture moves exactly one section. */
+  /* ---- Section navigation (desktop) ---------------------------
+     Scrolling itself stays native: das Einrasten uebernimmt CSS
+     (scroll-snap-type: y proximity). Frueher hat hier ein wheel-
+     Handler jedes Event abgefangen und pro Geste eine ganze Sektion
+     weitergesprungen — auf dem Trackpad fuehlte sich das zaeh und
+     unkontrollierbar an, weil die Momentum-Phase die Sperre offen
+     hielt. Geblieben ist nur die Tastaturnavigation. */
   (function initSectionNav() {
     var mq = window.matchMedia("(min-width: 900px)");
     var sections = ["top", "work", "skills", "about", "contact"]
       .map(function (id) { return document.getElementById(id); });
     var navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--nav-h"), 10) || 71;
     var locked = false;
-    var lastWheel = 0;
 
     function currentIndex() {
       var best = 0, bd = Infinity;
@@ -325,28 +327,28 @@
       });
       return best;
     }
-    function scheduleUnlock() {
-      var since = Date.now() - lastWheel;
-      if (since < 120) { setTimeout(scheduleUnlock, 120 - since); }
-      else { locked = false; }
-    }
     function goTo(i) {
       i = Math.max(0, Math.min(sections.length - 1, i));
       locked = true;
       window.scrollTo({ top: sections[i].offsetTop - navH, behavior: REDUCED ? "auto" : "smooth" });
-      setTimeout(scheduleUnlock, REDUCED ? 60 : 600);
+      setTimeout(function () { locked = false; }, REDUCED ? 60 : 500);
     }
     function modalOpen() { return modal.classList.contains("is-open"); }
 
-    window.addEventListener("wheel", function (e) {
-      if (!mq.matches || modalOpen()) return;
-      var dir = e.deltaY > 0 ? 1 : (e.deltaY < 0 ? -1 : 0);
-      if (!dir) return;          // let horizontal scrolling (carousel) pass through
-      e.preventDefault();        // take over vertical scrolling
-      lastWheel = Date.now();
-      if (locked) return;
-      goTo(currentIndex() + dir);
-    }, { passive: false });
+    /* Anker-Links (Nav, Hero-Button, "Lass uns reden") sanft scrollen —
+       bewusst hier in JS statt per CSS scroll-behavior, damit das freie
+       Scrollen mit dem Trackpad unangetastet bleibt. */
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - navH, behavior: REDUCED ? "auto" : "smooth" });
+      if (history.replaceState) history.replaceState(null, "", "#" + id);
+    });
 
     window.addEventListener("keydown", function (e) {
       if (!mq.matches || modalOpen()) return;

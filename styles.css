@@ -319,6 +319,33 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
   letter-spacing: -0.025em; line-height: 1.1; margin: 14px 0 0; color: var(--ink);
 }
 .about__text { font-size: 18px; line-height: 1.65; color: var(--muted); margin: 20px 0 0; max-width: 580px; }
+/* Flache Fenster (kleine Laptops): About-Panel soll eine Bildschirmhoehe
+   bleiben, deshalb Typo und Abstaende etwas enger. */
+@media (min-width: 900px) and (max-height: 780px) {
+  .about { padding-top: 36px; padding-bottom: 36px; }
+  .about__text { font-size: 16px; line-height: 1.55; margin-top: 14px; }
+  .about__title { font-size: clamp(1.6rem, 1.1rem + 1.9vw, 2.1rem); margin-top: 10px; }
+  .about__more { margin-top: 10px; padding-top: 10px; }
+}
+/* Aufklappbarer Werdegang: haelt das About-Panel auf einer Bildschirmhoehe,
+   ohne Text zu kuerzen. */
+.about__more { margin-top: 14px; border-top: 1px solid var(--border-hairline); padding-top: 12px; }
+.about__more summary {
+  display: flex; align-items: center; gap: 9px; cursor: pointer; list-style: none;
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em;
+  color: var(--faint); transition: color 0.2s;
+}
+.about__more summary::-webkit-details-marker { display: none; }
+.about__more summary::after {
+  content: ""; width: 6px; height: 6px; margin-top: -3px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg); transition: transform 0.25s var(--ease-out);
+}
+.about__more[open] summary::after { transform: rotate(-135deg); margin-top: 2px; }
+.about__more summary:hover { color: var(--muted); }
+.about__more summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-radius: 4px; }
+.about__more .about__text { margin-top: 14px; }
+
 .about__tools-label { margin: 0; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--faint); }
 .about__tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 @media (max-width: 820px) {
@@ -330,16 +357,25 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
 /* ---------------------------------------------------------------
    CONTACT
    --------------------------------------------------------------- */
-.contact { background: var(--gradient); color: #fff; text-align: center; padding: 92px 24px 40px; }
-.contact__inner { max-width: 680px; margin: 0 auto; }
-.contact__title { font-family: var(--font-display); font-weight: var(--fw-extra); font-size: clamp(2rem, 1.4rem + 3vw, 3rem); letter-spacing: -0.02em; margin: 0; color: #fff; }
-.contact__sub { margin-top: 14px; font-size: 17px; opacity: 0.92; }
+/* Kontakt teilt sich das helle Schema der uebrigen Sektionen; der Verlauf
+   liegt nur noch als weicher Schimmer im Hintergrund und auf dem Button,
+   statt die ganze Flaeche zu fuellen. */
+.contact { position: relative; overflow: hidden; background: var(--white); color: var(--ink); text-align: center; padding: 92px 24px 40px; }
+.contact::before {
+  content: ""; position: absolute; left: 50%; top: 42%;
+  width: 900px; height: 420px; transform: translate(-50%, -50%);
+  background: var(--gradient); filter: blur(150px); opacity: 0.16;
+  pointer-events: none;
+}
+.contact__inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+.contact__title { font-family: var(--font-display); font-weight: var(--fw-extra); font-size: clamp(2rem, 1.4rem + 3vw, 3rem); letter-spacing: -0.02em; margin: 0; color: var(--ink); }
+.contact__sub { margin-top: 14px; font-size: 17px; color: var(--muted); }
 .contact__mail-wrap { display: flex; justify-content: center; margin-top: 28px; }
 .contact__mail {
   display: inline-flex; align-items: center; gap: 10px;
-  background: #fff; color: var(--ink); font-weight: var(--fw-bold); font-size: 15px;
+  background: var(--gradient); color: var(--text-on-accent); font-weight: var(--fw-bold); font-size: 15px;
   padding: 15px 28px; border-radius: var(--radius-pill);
-  box-shadow: 0 12px 30px rgba(21,16,58,0.18);
+  box-shadow: var(--shadow-accent);
   transition: transform var(--dur-base) var(--ease-out);
 }
 .contact__mail:hover { transform: translateY(-3px); }
@@ -347,12 +383,14 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
 .contact__socials a {
   display: flex; align-items: center; justify-content: center;
   width: 44px; height: 44px; border-radius: var(--radius-pill);
-  background: rgba(255,255,255,0.15); color: #fff;
-  transition: background 0.2s, transform 0.2s;
+  background: var(--white); color: var(--text-strong);
+  border: 1px solid var(--border-hairline);
+  transition: background 0.2s, transform 0.2s, color 0.2s;
 }
-.contact__socials a:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
-.contact__footer { margin-top: 56px; font-size: 12px; color: rgba(255,255,255,0.78); }
-.contact__footer a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.contact__socials a:hover { background: var(--bg-surface); color: var(--ink); transform: translateY(-2px); }
+.contact__footer { position: relative; z-index: 1; margin-top: 56px; font-size: 12px; color: var(--faint); }
+.contact__footer a { color: var(--muted); text-decoration: underline; text-underline-offset: 2px; }
+.contact__footer a:hover { color: var(--ink); }
 
 /* ---------------------------------------------------------------
    MODAL
@@ -419,10 +457,19 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
   html {
     scroll-snap-type: y proximity;
     scroll-padding-top: var(--nav-h);
+    /* Kein scroll-behavior: smooth hier — zusammen mit scroll-snap laesst
+       das den Browser zum Snap-Punkt animieren und verschluckt dabei
+       eingehende Wheel-Events. Sanftes Scrollen macht stattdessen
+       gezielt app.js (Tastatur + Anker-Links). */
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-snap-type: none; }
   }
   .hero, .work, .skills, .about, .contact {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    /* Kein scroll-snap-stop: always — das zwang jede Sektion zum Halt und
+       machte laengere Trackpad-Gesten unmoeglich. Mit proximity rastet die
+       Seite nur ein, wenn man ohnehin in der Naehe stehen bleibt. */
     min-height: calc(100vh - var(--nav-h));
     box-sizing: border-box;
     display: flex;
@@ -442,4 +489,16 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
   .contact { position: relative; padding-top: 64px; padding-bottom: 40px; }
   /* Pin the contact footer to the bottom while its content stays centered */
   .contact__footer { position: absolute; left: 0; right: 0; bottom: 18px; margin-top: 0; }
+}
+
+/* ---------------------------------------------------------------
+   Flache Desktop-Fenster: das About-Panel wird von der 4:5-Portraitkachel
+   bestimmt, nicht vom Text. Kachel und Abstaende schrumpfen hier, damit
+   die Sektion eine Bildschirmhoehe bleibt. Steht bewusst am Dateiende,
+   damit es die Panel-Paddings weiter oben ueberschreibt.
+   --------------------------------------------------------------- */
+@media (min-width: 900px) and (max-height: 780px) {
+  .about { padding-top: 32px; padding-bottom: 32px; }
+  .about__portrait { flex: 0 0 32%; }
+  .about__inner { gap: 48px; }
 }

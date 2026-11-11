@@ -137,7 +137,10 @@ html {
   background: var(--bg-page);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
+  /* Bewusst kein scroll-behavior: smooth — zusammen mit scroll-snap
+     animiert der Browser zum Snap-Punkt und verschluckt dabei die
+     Wheel-Events der Trackpad-Momentum-Phase. Sanftes Scrollen fuer
+     Anker-Links und Tastatur macht app.js gezielt per scrollTo(). */
 }
 
 body {
