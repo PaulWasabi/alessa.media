@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Pilzzucht-Reels × Alessa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400 800;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400 800;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-ext-normal.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}</style>
+</head>
+<body>
+
+<style>
+/* Layout: one narrow reading column – pitch, proof numbers, need/bring table, work, answers, contact. Brand tokens from alessamedia.de */
+:root {
+  --bg:#ffffff; --surface:#fbfafe; --ink:#15103a; --muted:#5d5985; --line:#ece8f8;
+  --violet:#7c3aed; --pink:#db2777; --amber:#d97706; --chip:#f5f3ff;
+  --todo-bg:#fef3c7; --todo-fg:#78350f; --todo-line:#d97706;
+  --grad:linear-gradient(110deg,#7c3aed,#ec4899 55%,#f59e0b);
+  --font:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg:#0e0a26; --surface:#161034; --ink:#efecfd; --muted:#aaa6cc; --line:#2a2352;
+  --violet:#a78bfa; --pink:#f472b6; --amber:#fbbf24; --chip:#1f1846;
+  --todo-bg:#3b2a06; --todo-fg:#fde68a; --todo-line:#f59e0b; color-scheme:dark } }
+:root[data-theme="dark"] {
+  --bg:#0e0a26; --surface:#161034; --ink:#efecfd; --muted:#aaa6cc; --line:#2a2352;
+  --violet:#a78bfa; --pink:#f472b6; --amber:#fbbf24; --chip:#1f1846;
+  --todo-bg:#3b2a06; --todo-fg:#fde68a; --todo-line:#f59e0b; color-scheme:dark }
+* { box-sizing:border-box }
+body { background:var(--bg); color:var(--ink); font-family:var(--font); font-size:16px; line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); }
+.wrap { max-width:760px; margin:0 auto; padding-block:28px 64px; display:flex; flex-direction:column; gap:56px }
+a { color:var(--violet) }
+a:focus-visible, button:focus-visible { outline:2px solid var(--violet); outline-offset:3px; border-radius:6px }
+.top { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; font-size:14px }
+.brand { font-weight:800; letter-spacing:-.01em; text-decoration:none; color:var(--ink); display:flex; align-items:center; gap:8px }
+.brand i { width:12px; height:12px; border-radius:50%; background:var(--grad); display:inline-block }
+.for { color:var(--muted); background:var(--chip); padding:4px 12px; border-radius:999px }
+.hero { display:flex; flex-direction:column; gap:18px }
+.eyebrow { font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--pink); margin:0 }
+h1 { font-size:clamp(2rem, 1.3rem + 3.2vw, 3rem); line-height:1.12; letter-spacing:-.025em; font-weight:800; margin:0; text-wrap:balance }
+h1 em { font-style:normal; background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent }
+.lead { font-size:1.125rem; color:var(--muted); margin:0; max-width:62ch }
+.cta { display:flex; gap:10px; flex-wrap:wrap; margin-top:6px }
+.btn { font:inherit; font-weight:700; font-size:15px; border-radius:999px; padding:11px 20px; text-decoration:none; cursor:pointer; border:1.5px solid var(--ink); background:transparent; color:var(--ink) }
+.btn.primary { background:var(--ink); color:var(--bg) }
+.btn:hover { border-color:var(--violet) }
+.stats { display:grid; grid-template-columns:repeat(var(--cols,3),minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:16px; overflow:hidden }
+.stat { background:var(--surface); padding:18px 18px 16px; display:flex; flex-direction:column; gap:4px }
+@media (max-width:560px) { .stats { grid-template-columns:repeat(var(--cols-m,1),minmax(0,1fr)) } }
+.num { font-size:1.75rem; font-weight:800; letter-spacing:-.02em; font-variant-numeric:tabular-nums; line-height:1.1 }
+.lbl { font-size:13.5px; color:var(--muted); line-height:1.4 }
+section { display:flex; flex-direction:column; gap:18px }
+h2 { font-size:1.375rem; letter-spacing:-.015em; margin:0; font-weight:800 }
+.table { display:flex; flex-direction:column; border-top:1px solid var(--line) }
+.thead, .row { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:24px; padding:14px 0; border-bottom:1px solid var(--line) }
+.thead { font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding:10px 0 }
+.need { font-weight:700 }
+.have { color:var(--muted) }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:12px }
+.card { display:flex; flex-direction:column; gap:6px; padding:16px; border:1px solid var(--line); border-radius:14px; text-decoration:none; color:var(--ink); background:var(--surface); transition:border-color .15s }
+.card:hover { border-color:var(--violet) }
+.cname { font-weight:800 }
+.csub { font-size:14px; color:var(--muted); line-height:1.45 }
+.tags { list-style:none; padding:0; margin:4px 0 0; display:flex; flex-wrap:wrap; gap:6px }
+.tags li { font-size:12px; font-weight:600; background:var(--chip); color:var(--violet); padding:2px 9px; border-radius:999px }
+.cgo { font-size:13px; font-weight:700; color:var(--violet); margin-top:auto; padding-top:6px }
+.qa { display:flex; flex-direction:column; gap:20px }
+.qa-item h3 { font-size:1rem; margin:0 0 4px; font-weight:800 }
+.qa-item p { margin:0; color:var(--muted); max-width:66ch }
+.links { margin:0; padding-left:20px; color:var(--muted) }
+.plan { margin:0; padding-left:22px; display:flex; flex-direction:column; gap:10px; color:var(--muted) }
+.plan strong { color:var(--ink) }
+.plan-intro { margin:0; color:var(--muted) }
+.show video { width:100%; max-width:100%; aspect-ratio:16/9; background:#000; border-radius:14px; display:block }
+.show-text { margin:0; color:var(--muted); max-width:66ch }
+mark.todo { background:var(--todo-bg); color:var(--todo-fg); border:1.5px dashed var(--todo-line); border-radius:6px; padding:0 5px; font-weight:600 }
+.contact { border-radius:20px; padding:28px; background:var(--surface); border:1px solid var(--line); display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden }
+.contact::before { content:""; position:absolute; inset:0 0 auto; height:4px; background:var(--grad) }
+.contact h2 { font-size:1.6rem }
+.mailrow { display:flex; gap:10px; align-items:center; flex-wrap:wrap }
+.mailaddr { font-weight:700; font-size:1.05rem; user-select:all; word-break:break-all }
+.small { font-size:14px; color:var(--muted); display:flex; gap:18px; flex-wrap:wrap }
+@media (max-width:560px) {
+  .thead { display:none }
+  .row { grid-template-columns:1fr; gap:4px }
+  .wrap { gap:44px }
+}
+@media (prefers-reduced-motion: reduce) { * { transition:none !important } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="https://alessamedia.de" target="_blank" rel="noopener"><i></i>alessa media</a>
+    <span class="for">Bewerbung: Reel-Cutter (m/w/d)</span>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Reel-Cutter · 9:16, 60–80 Sekunden</p>
+    <h1>Dein Voiceover, deine B-Roll, <em>meine Reels.</em></h1>
+    <p class="lead">Ich bin Alessa, freiberufliche Video-Editorin aus München. Reels aus fertigem Material mit Voiceover, Untertiteln und Musik schneide ich jede Woche, seit über zwei Jahren.</p>
+    <div class="cta">
+      <a class="btn primary" href="#kontakt">Lass uns sprechen</a>
+      <a class="btn" href="https://alessamedia.de/index.html#work" target="_blank" rel="noopener">Portfolio ansehen ↗</a>
+    </div>
+  </section>
+
+  
+
+  <div class="stats" style="--cols:3;--cols-m:1"><div class="stat"><span class="num">1.200+</span><span class="lbl">Shorts &amp; Reels geschnitten</span></div><div class="stat"><span class="num">seit 2024</span><span class="lbl">jede Woche Reels für Der Stilberater</span></div><div class="stat"><span class="num">1 Mio+</span><span class="lbl">Views pro Monat auf Kanälen, die ich schneide</span></div></div>
+
+  <section>
+    <h2>Was ihr sucht – was ich mitbringe</h2>
+    <div class="table">
+      <div class="thead"><span>Gesucht</span><span>Mitgebracht</span></div>
+      <div class="row"><div class="need">CapCut, Premiere Pro oder Ähnliches</div><div class="have">Premiere Pro ist mein Hauptwerkzeug, dazu After Effects, Photoshop und Audition.</div></div><div class="row"><div class="need">Gefühl für Tempo und Short-Form</div><div class="have">Über 1.200 Shorts und Reels: Schnitt auf die Sprache, B-Roll genau auf das gesprochene Wort, kein Leerlauf.</div></div><div class="row"><div class="need">Untertitel, Musik und Schnitt passend zum Voiceover</div><div class="have">Das baue ich jede Woche für Der Stilberater: Untertitel im festen Stil, Bilder auf dem Wort, das sie benennen, Sound und Musik passend zum Text.</div></div><div class="row"><div class="need">Deine Vorgaben (Musik, Font, Beispiel-Reels)</div><div class="have">Ich arbeite seit Jahren nach festen Kanal-Vorgaben und halte den Look über Hunderte Videos gleich.</div></div><div class="row"><div class="need">Zuverlässig, Lieferung in 2–3 Tagen</div><div class="have">Seit April 2024 liefere ich durchgehend für denselben Kunden. Reels bekommst du am selben Tag bis spätestens nach 48 Stunden.</div></div>
+    </div>
+  </section>
+
+  
+
+  <section>
+    <h2>Passende Arbeiten</h2>
+    <div class="cards"><a class="card" href="https://www.youtube.com/@derstilberater" target="_blank" rel="noopener"><span class="cname">Der Stilberater</span><span class="csub">YouTube-Longform &amp; Shorts für Justus Hansen (136K Abos) · seit 2024</span><ul class="tags"><li>YouTube</li><li>Shorts</li><li>Reels</li><li>TikTok</li></ul><span class="cgo">ansehen ↗</span></a><a class="card" href="https://www.instagram.com/alles.umami/" target="_blank" rel="noopener"><span class="cname">alles umami</span><span class="csub">Food-Content für Social Media: Konzept, Schnitt, Sound</span><ul class="tags"><li>Food</li><li>Instagram</li><li>TikTok</li><li>Konzeption</li></ul><span class="cgo">ansehen ↗</span></a><a class="card" href="https://www.instagram.com/techundschmetterlinge/" target="_blank" rel="noopener"><span class="cname">Schwarz Digits</span><span class="csub">Podcast „Tech, KI &amp; Schmetterlinge“: Social-Auftritt von null aufgebaut</span><ul class="tags"><li>Podcast-Clips</li><li>Instagram</li><li>TikTok</li><li>LinkedIn</li></ul><span class="cgo">ansehen ↗</span></a></div>
+  </section>
+
+  <section><h2>Eure Fragen, meine Antworten</h2><div class="qa"><div class="qa-item"><h3>Was hast du bisher geschnitten?</h3><p>Vor allem Shorts, Reels und YouTube-Videos für Creator (Der Stilberater, The Style Consultant), Podcast-Clips für Schwarz Digits und Food-Content für Social Media (alles umami).</p></div><div class="qa-item"><h3>Beispiele</h3><ul class="links"><li><a href="https://www.youtube.com/@derstilberater/shorts" target="_blank" rel="noopener">Der Stilberater – YouTube Shorts</a></li><li><a href="https://www.instagram.com/techundschmetterlinge/" target="_blank" rel="noopener">Tech, KI &amp; Schmetterlinge – Instagram</a></li><li><a href="https://www.instagram.com/alles.umami/" target="_blank" rel="noopener">alles umami – Food-Content für Social Media</a></li></ul></div><div class="qa-item"><h3>Probeschnitt?</h3><p>Sehr gern. Schick mir das Material, dann siehst du direkt, wie ich arbeite.</p></div></div></section>
+
+  <section class="contact" id="kontakt">
+    <h2>Schick mir den Drive-Ordner für den Probeschnitt.</h2>
+    <div class="mailrow">
+      <span class="mailaddr" id="mail">alessa.wieler@icloud.com</span>
+      <button class="btn" type="button" id="copy">Kopieren</button>
+    </div>
+    <div class="small">
+      <span>Alessa Wieler · Freelance Video & Audio Editor · München</span>
+      <a href="https://alessamedia.de" target="_blank" rel="noopener">alessamedia.de</a>
+      <a href="https://www.linkedin.com/in/alessa-nienartowicz/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var b = this, txt = 'alessa.wieler@icloud.com';
+  function done() { b.textContent = 'Kopiert'; setTimeout(function () { b.textContent = 'Kopieren'; }, 1600); }
+  function select() { var r = document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  try { navigator.clipboard.writeText(txt).then(done, select); } catch (e) { select(); }
+});
+</script>
+
+</body>
+</html>
