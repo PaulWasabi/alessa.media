@@ -85,7 +85,7 @@ window.AM_EN = {
     "style-consultant": { title: "YouTube Video Production", cta: "Visit YouTube channel", description: "As video editor for The Style Consultant, I helped build the English-language channel from zero and have edited its short- and long-form videos since launch." },
     "tech-ki-schmetterlinge": { description: "As video editor for the podcast “Tech, KI & Schmetterlinge”, I helped build its social media presence from the very start." },
     "prismasuite": { title: "VLC production", description: "Production for Prismasuite, including editing, animation and sound design." },
-    "alles-umami": { title: "Food content for TikTok", cta: "Visit TikTok channel", description: "An ongoing cooking channel on TikTok: concept, editing and sound design for short-form recipe videos." },
+    "alles-umami": { title: "Food content for Instagram & TikTok", cta: "Visit Instagram", description: "An ongoing cooking channel on Instagram and TikTok: concept, editing and sound design for short-form recipe videos." },
     "arrow": { description: "Teaser video for Arrowsphere: editing, animation, sound design and voiceover combined into a punchy product teaser." },
     "deloitte": { client: "Deloitte Germany", title: "Video series “Hidden Movers Award”", description: "Editing of a multi-part video series around the Hidden Movers Award." },
     "giz": { description: "Editing of a short documentary about regional innovation projects." },

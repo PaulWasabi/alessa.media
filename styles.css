@@ -273,6 +273,21 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
 }
 .pc-plate__client { margin: 0; font-size: var(--fs-xs); opacity: 0.85; }
 .pc-plate__title { margin: 2px 0 0; font-size: var(--fs-body); font-weight: var(--fw-extra); line-height: var(--lh-snug); color: #fff; }
+/* Karten mit Firmenlogo: Logo freigestellt auf hellem Grund, nicht beschnitten */
+.pc-visual--logo {
+  background-color: #fff; background-image: none;
+  background-origin: content-box; background-size: contain;
+  padding: 36px 48px 96px;
+  border: 1px solid var(--line);
+}
+.pc-visual--logo .pc-play-wrap { inset: auto 18px 22px auto; }
+.pc-visual--logo .pc-play { width: 44px; height: 44px; }
+.pc-visual--logo .pc-plate { background: none; color: var(--ink); padding-right: 76px; }
+.pc-visual--logo .pc-plate__client { color: var(--muted); opacity: 1; }
+.pc-visual--logo .pc-plate__title { color: var(--ink); }
+.pc-visual--logo-dark { background-color: #101010; border-color: #101010; padding: 20px 48px 84px; }
+.pc-visual--logo-dark .pc-plate__client { color: rgba(255,255,255,0.7); }
+.pc-visual--logo-dark .pc-plate__title { color: #fff; }
 .pc-tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
 
 /* Audio waveform visual */
