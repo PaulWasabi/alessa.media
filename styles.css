@@ -285,7 +285,10 @@ body { background: var(--white); color: var(--ink); font-family: var(--font-body
 .pc-visual--logo .pc-plate { background: none; color: var(--ink); padding-right: 76px; }
 .pc-visual--logo .pc-plate__client { color: var(--muted); opacity: 1; }
 .pc-visual--logo .pc-plate__title { color: var(--ink); }
-.pc-visual--logo-dark { background-color: #101010; border-color: #101010; padding: 20px 48px 84px; }
+.pc-visual--logo-dark {
+  background-color: #101010; border-color: #101010;
+  padding: 0; background-origin: border-box; background-size: cover; background-position: center 72%;
+}
 .pc-visual--logo-dark .pc-plate__client { color: rgba(255,255,255,0.7); }
 .pc-visual--logo-dark .pc-plate__title { color: #fff; }
 .pc-tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
