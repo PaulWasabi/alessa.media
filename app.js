@@ -13,15 +13,15 @@
     { id:"stilberater", client:"Der Stilberater", title:"Social Media Video Production", category:"social", services:["Videoedit","Short-Form","Longform"], thumbnail:"assets/stilberater.png", url:"https://www.youtube.com/@derstilberater", cta:"Zum YouTube-Kanal", description:"Als Video Editorin für den Influencer „Der Stilberater“ verantworte ich Short- und Longform-Videos für Instagram, YouTube und TikTok." },
     { id:"style-consultant", client:"The Style Consultant", title:"YouTube Video Production (EN)", category:"social", services:["Videoedit","Short-Form","Longform"], thumbnail:"assets/style-consultant.jpg", url:"https://www.youtube.com/@TheStyleConsultant", cta:"Zum YouTube-Kanal", description:"Als Video Editorin für The Style Consultant habe ich den englischsprachigen Kanal von Null an mit aufgebaut und ab dem Start Short- und Longform-Videos geschnitten." },
     { id:"tech-ki-schmetterlinge", client:"Schwarz Digits", title:"Tech, KI & Schmetterlinge", category:["audio","social"], services:["Social Media","Videoedit"], thumbnail:"assets/tech-ki-schmetterlinge.png", url:"https://open.spotify.com/show/5KlYjpj6RhYTP8L8k4bzi4", links:[{ label:"Instagram", url:"https://www.instagram.com/techundschmetterlinge/" }], description:"Als Video Editorin für den Podcast „Tech, KI & Schmetterlinge“ habe ich dessen Social-Media-Präsenz von Beginn an mit aufgebaut." },
-    { id:"prismasuite", client:"Prismasuite", title:"VLC Produktion", category:"film", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/prismasuite.png", description:"Produktion inkl. Schnitt, Animation und Sounddesign für Prismasuite." },
+    { id:"prismasuite", client:"Prismasuite", title:"VLC Produktion", category:"film", services:["Videoedit","Animation","Sounddesign"], thumbnail:"assets/prismasuite.png", url:"https://www.youtube.com/watch?v=hvz8KLggs6k&t=81s", description:"Produktion inkl. Schnitt, Animation und Sounddesign für Prismasuite." },
     { id:"alles-umami", client:"alles umami", title:"Food-Content für TikTok", category:"social", services:["Konzeption","Videoedit","Sounddesign"], thumbnail:"assets/alles-umami.jpg", url:"https://www.tiktok.com/@alles.umami", cta:"Zum TikTok-Kanal", description:"Laufender Koch-Channel auf TikTok: Konzeption, Schnitt und Sounddesign für Short-Form-Rezeptvideos." },
-    { id:"arrow", client:"Arrow", title:"Arrowsphere Teaser Video", category:"film", services:["Videoedit","Animation","Sounddesign","Voiceover"], thumbnail:"assets/arrow.png", description:"Teaser-Video für Arrowsphere: Schnitt, Animation, Sounddesign und Voiceover zu einem prägnanten Produkt-Teaser kombiniert." },
+    { id:"arrow", client:"Arrow", title:"Arrowsphere Teaser Video", category:"film", services:["Videoedit","Animation","Sounddesign","Voiceover"], thumbnail:"assets/arrow.png", url:"https://www.youtube.com/watch?v=_ORZF7_aAqk", description:"Teaser-Video für Arrowsphere: Schnitt, Animation, Sounddesign und Voiceover zu einem prägnanten Produkt-Teaser kombiniert." },
     { id:"deloitte", client:"Deloitte Deutschland", title:"Videoreihe „Hidden Movers Award“", category:"film", services:["Videoedit"], thumbnail:"assets/deloitte.png", description:"Schnitt einer mehrteiligen Videoreihe rund um den Hidden Movers Award." },
-    { id:"giz", client:"Giz", title:"„My Region is the Lab“", category:"film", services:["Videoedit"], thumbnail:"assets/giz.png", description:"Schnitt einer Kurzdokumentation über regionale Innovationsprojekte." },
-    { id:"rkw", client:"RKW", title:"Social Entrepreneurship — Behind the Scenes", category:"film", services:["Videoedit"], thumbnail:"assets/rkw.jpg", description:"Behind-the-Scenes-Videoreihe zum Thema Social Entrepreneurship." },
-    { id:"techfounders", client:"Techfounders", title:"Demo Day Teaser", category:"film", services:["Videoedit"], thumbnail:"assets/techfounders.jpg", description:"Energiegeladener Teaser zum Demo Day mit pointiertem Schnitt." },
-    { id:"munich", client:"Munich Business", title:"Social Innovation Strategy", category:"film", services:["Videoedit"], description:"Videoproduktion zur Social Innovation Strategy." },
-    { id:"forstory", client:"forstory", title:"Impact Film Production", category:"film", services:["Videoedit"], thumbnail:"assets/forstory.png", description:"Schnitt einer Impact-orientierten Filmproduktion." },
+    { id:"giz", client:"Giz", title:"„My Region is the Lab“", category:"film", services:["Videoedit"], thumbnail:"assets/giz.png", url:"https://www.youtube.com/watch?v=4x1Aqodd8C8", description:"Schnitt einer Kurzdokumentation über regionale Innovationsprojekte." },
+    { id:"rkw", client:"RKW", title:"Social Entrepreneurship — Behind the Scenes", category:"film", services:["Videoedit"], thumbnail:"assets/rkw.jpg", url:"https://www.youtube.com/watch?v=j-hhKnK89Bg&t=15s", description:"Behind-the-Scenes-Videoreihe zum Thema Social Entrepreneurship." },
+    { id:"techfounders", client:"Techfounders", title:"Demo Day Teaser", category:"film", services:["Videoedit"], thumbnail:"assets/techfounders.jpg", url:"https://www.youtube.com/watch?v=qNFEBg4CDjE", description:"Energiegeladener Teaser zum Demo Day mit pointiertem Schnitt." },
+    { id:"munich", client:"Munich Business", title:"Social Innovation Strategy", category:"film", services:["Videoedit"], url:"https://www.linkedin.com/posts/munich-business_munichbusiness-socialinnovation-activity-7134813126905987074-w5fF", cta:"Auf LinkedIn ansehen", links:[{ label:"Zweiter Beitrag", url:"https://www.linkedin.com/posts/munich-business_socialinnovation-networking-munichbusiness-activity-7130548327833645056-ntYB" }], description:"Videoproduktion zur Social Innovation Strategy." },
+    { id:"forstory", client:"forstory", title:"Impact Film Production", category:"film", services:["Videoedit"], thumbnail:"assets/forstory.png", url:"https://vimeo.com/294643469", description:"Schnitt einer Impact-orientierten Filmproduktion." },
     { id:"bundespolizei", client:"Bundespolizei", title:"„Gefahren am Bahnsteig“", category:"film", services:["Konzeption","Videoedit"], description:"Konzeption und Schnitt einer Aufklärungskampagne zu Gefahren am Bahnsteig." },
     { id:"cisco", client:"Cisco", title:"Zukunft verstehen – Wie Technik die Welt verändert", category:"audio", services:["Einsprechen"], thumbnail:"assets/cisco-zukunft-verstehen.png", url:"https://www.cisco.com/c/de_de/solutions/executive-perspectives/podcasts.html", description:"Sprecherin für den deutschen Tech-Podcast „Zukunft verstehen – Wie Technik die Welt verändert“ von Sascha Lobo & Cisco." },
     { id:"sascha-lobo", client:"Feel the News (heute „POV“)", title:"Podcast-Produktion", category:"audio", services:["Audioschnitt","Audio Mastering"], thumbnail:"assets/sascha-lobo-pov.png", description:"Als Audio Editorin für den Podcast „Feel the News“ (heute „POV“) war ich für den Schnitt der Folgen verantwortlich — für ein flüssiges Hörerlebnis." }
@@ -36,7 +36,20 @@
   var CTA_LABEL = { audio:"Jetzt anhören", film:"Video ansehen", social:"Zum Kanal" };
   var WAVE_BARS = [40,70,100,60,85,45,75,55,90,35,65,50,80,42,68,58,88,46];
 
-  var state = { filter: "all", nearest: 0 };
+  var state = { filter: "all", nearest: 0, lang: "de" };
+
+  /* ---- Sprache (DE / EN) ---------------------------------------
+     Deutsch steht im HTML und in PROJECTS, Englisch in i18n.js.
+     Reihenfolge: ?lang=en in der Adresse > zuletzt gewaehlt >
+     Browsersprache (alles ausser Deutsch zeigt Englisch). */
+  var EN = window.AM_EN || null;
+  function isEN() { return state.lang === "en" && !!EN; }
+  function tr(p, field) {
+    if (isEN() && EN.projects[p.id] && EN.projects[p.id][field]) return EN.projects[p.id][field];
+    return p[field];
+  }
+  function trService(s) { return isEN() && EN.services[s] ? EN.services[s] : s; }
+  function filterLabel(f) { return isEN() && EN.filters[f.key] ? EN.filters[f.key] : f.label; }
 
   /* ---- Helpers ------------------------------------------------- */
   /* category kann ein String oder ein Array mehrerer Kategorien sein */
@@ -90,14 +103,14 @@
     }
 
     var plate = el("div", "pc-plate");
-    var pClient = el("p", "pc-plate__client"); pClient.textContent = p.client;
-    var pTitle = el("h3", "pc-plate__title"); pTitle.textContent = p.title;
+    var pClient = el("p", "pc-plate__client"); pClient.textContent = tr(p, "client");
+    var pTitle = el("h3", "pc-plate__title"); pTitle.textContent = tr(p, "title");
     plate.appendChild(pClient); plate.appendChild(pTitle);
     visual.appendChild(plate);
 
     var tags = el("div", "pc-tags");
     p.services.forEach(function (s) {
-      var t = el("span", "tag"); t.textContent = s; tags.appendChild(t);
+      var t = el("span", "tag"); t.textContent = trService(s); tags.appendChild(t);
     });
 
     article.appendChild(visual);
@@ -124,9 +137,10 @@
   /* ---- Filter chips ------------------------------------------- */
   function renderChips() {
     var wrap = document.getElementById("work-chips");
+    wrap.innerHTML = "";
     FILTERS.forEach(function (f) {
       var c = el("button", "chip" + (state.filter === f.key ? " is-active" : ""), { type: "button" });
-      c.textContent = f.label;
+      c.textContent = filterLabel(f);
       c.setAttribute("aria-pressed", state.filter === f.key);
       c.addEventListener("click", function () {
         state.filter = f.key;
@@ -176,18 +190,20 @@
   /* ---- Modal --------------------------------------------------- */
   var modal = document.getElementById("project-modal");
   function openModal(p) {
-    document.getElementById("modal-client").textContent = p.client;
-    document.getElementById("modal-title").textContent = p.title;
-    document.getElementById("modal-desc").textContent = p.description;
+    document.getElementById("modal-client").textContent = tr(p, "client");
+    document.getElementById("modal-title").textContent = tr(p, "title");
+    document.getElementById("modal-desc").textContent = tr(p, "description");
     var tagsBox = document.getElementById("modal-tags");
     tagsBox.innerHTML = "";
     p.services.forEach(function (s) {
-      var t = el("span", "tag"); t.textContent = s; tagsBox.appendChild(t);
+      var t = el("span", "tag"); t.textContent = trService(s); tagsBox.appendChild(t);
     });
     var ctaBox = document.getElementById("modal-cta");
     ctaBox.innerHTML = "";
     if (p.url) {
-      var label = p.cta || CTA_LABEL[primaryCategory(p)] || "Projekt ansehen";
+      var label = isEN()
+        ? (tr(p, "cta") !== p.cta ? tr(p, "cta") : (EN.ctaLabel[primaryCategory(p)] || EN.ctaLabel.fallback))
+        : (p.cta || CTA_LABEL[primaryCategory(p)] || "Projekt ansehen");
       var a = el("a", "btn btn--primary", { href: p.url, target: "_blank", rel: "noopener noreferrer" });
       a.innerHTML = label + externalIcon();
       ctaBox.appendChild(a);
@@ -196,7 +212,8 @@
     if (p.links) {
       p.links.forEach(function (l) {
         var s = el("a", "btn btn--secondary", { href: l.url, target: "_blank", rel: "noopener noreferrer" });
-        s.innerHTML = l.label + externalIcon();
+        var ll = (isEN() && EN.linkLabels && EN.linkLabels[l.label]) || l.label;
+        s.innerHTML = ll + externalIcon();
         ctaBox.appendChild(s);
       });
     }
@@ -292,7 +309,73 @@
     if (!user || !host) return;
     link.setAttribute("href", "mailto:" + user + "@" + host);
     link.setAttribute("title", "E-Mail an " + user + "@" + host);
+    link.setAttribute("data-title-de", "E-Mail an " + user + "@" + host);
+    link.setAttribute("data-title-en", ((EN && EN.mailTitle) || "Email ") + user + "@" + host);
   })();
+
+  /* ---- Sprach-Umschalter ------------------------------------- */
+  var ORIGINAL = { title: document.title, desc: "" };
+  var metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) ORIGINAL.desc = metaDesc.getAttribute("content");
+  /* Deutsche Originaltexte einmal merken, damit DE wiederhergestellt werden kann */
+  document.querySelectorAll("[data-i18n],[data-i18n-html]").forEach(function (n) { n._de = n.innerHTML; });
+  document.querySelectorAll("[data-i18n-aria]").forEach(function (n) { n._deAria = n.getAttribute("aria-label"); });
+
+  function applyLang(lang, remember) {
+    state.lang = (lang === "en" && EN) ? "en" : "de";
+    var en = isEN();
+    document.documentElement.lang = state.lang;
+    document.title = en ? EN.page.title : ORIGINAL.title;
+    if (metaDesc) metaDesc.setAttribute("content", en ? EN.page.description : ORIGINAL.desc);
+    document.querySelectorAll("[data-i18n]").forEach(function (n) {
+      var k = n.getAttribute("data-i18n");
+      if (en && EN.text[k] != null) n.textContent = EN.text[k]; else n.innerHTML = n._de;
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (n) {
+      var k = n.getAttribute("data-i18n-html");
+      n.innerHTML = (en && EN.text[k] != null) ? EN.text[k] : n._de;
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (n) {
+      var k = n.getAttribute("data-i18n-aria");
+      n.setAttribute("aria-label", (en && EN.text[k] != null) ? EN.text[k] : n._deAria);
+    });
+    var mail = document.getElementById("mail-link");
+    if (mail && mail.getAttribute("data-title-de")) mail.setAttribute("title", mail.getAttribute(en ? "data-title-en" : "data-title-de"));
+    document.querySelectorAll(".lang-toggle__btn").forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-lang") === state.lang ? "true" : "false");
+    });
+    if (remember) { try { localStorage.setItem("am-lang", state.lang); } catch (e) {} }
+  }
+
+  function initialLang() {
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q === "en" || q === "de") return q;
+    } catch (e) {}
+    try {
+      var saved = localStorage.getItem("am-lang");
+      if (saved === "en" || saved === "de") return saved;
+    } catch (e) {}
+    var langs = navigator.languages || [navigator.language || "de"];
+    return /^de\b/i.test(langs[0] || "de") ? "de" : "en";
+  }
+
+  applyLang(initialLang(), false);
+
+  document.querySelectorAll(".lang-toggle__btn").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var lang = b.getAttribute("data-lang");
+      if (lang === state.lang) return;
+      applyLang(lang, true);
+      renderChips();
+      renderCards();
+      try {
+        var u = new URL(location.href);
+        u.searchParams.delete("lang");
+        if (history.replaceState) history.replaceState(null, "", u.pathname + u.search + u.hash);
+      } catch (e) {}
+    });
+  });
 
   renderChips();
   renderCards();
