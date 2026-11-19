@@ -77,6 +77,11 @@ h2 { font-size:1.375rem; letter-spacing:-.015em; margin:0; font-weight:800 }
 .plan-intro { margin:0; color:var(--muted) }
 .show video { width:100%; max-width:100%; aspect-ratio:16/9; background:#000; border-radius:14px; display:block }
 .show-text { margin:0; color:var(--muted); max-width:66ch }
+.clips { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px }
+.clips figure { margin:0; display:flex; flex-direction:column; gap:8px }
+.show .clips video { aspect-ratio:9/16; border-radius:14px }
+.clips figcaption { font-size:14px; color:var(--muted); line-height:1.4 }
+.clips figcaption strong { color:var(--ink) }
 mark.todo { background:var(--todo-bg); color:var(--todo-fg); border:1.5px dashed var(--todo-line); border-radius:6px; padding:0 5px; font-weight:600 }
 .contact { border-radius:20px; padding:28px; background:var(--surface); border:1px solid var(--line); display:flex; flex-direction:column; gap:14px; position:relative; overflow:hidden }
 .contact::before { content:""; position:absolute; inset:0 0 auto; height:4px; background:var(--grad) }
@@ -108,16 +113,40 @@ mark.todo { background:var(--todo-bg); color:var(--todo-fg); border:1.5px dashed
     </div>
   </section>
 
-  
+  <section class="show">
+    <h2>Zwei Clips aus deiner Folge mit Thorsten Wegener</h2>
+    <p class="show-text">Ich dachte, ich zeig dir direkt, wie es aussehen könnte: Aus deiner Folge „Ex-Bankhändler enthüllt“ habe ich zwei Clips geschnitten und mich dabei an deinen Farben orientiert.</p>
+    <div class="clips">
+      <figure>
+        <video controls playsinline preload="metadata" poster="clip-1-poster.jpg">
+          <source src="clip-1-market-maker.mp4" type="video/mp4">
+        </video>
+        <figcaption><strong>Clip 1 · Market Maker</strong><br>Er stand auf der anderen Seite deines Trades</figcaption>
+      </figure>
+      <figure>
+        <video controls playsinline preload="metadata" poster="clip-2-poster.jpg">
+          <source src="clip-2-1-prozent-pro-woche.mp4" type="video/mp4">
+        </video>
+        <figcaption><strong>Clip 2 · 1 % pro Woche</strong><br>Warum Thorsten bei solchen Versprechen abwinkt</figcaption>
+      </figure>
+    </div>
+    <ul class="tags">
+      <li>9:16 für Shorts, Reels &amp; TikTok</li>
+      <li>Animierte Grafiken</li>
+      <li>Untertitel Wort für Wort</li>
+      <li>Bulle-&amp;-Mensch-Blau</li>
+      <li>Börse für jeden verständlich</li>
+    </ul>
+  </section>
 
-  <div class="stats" style="--cols:3;--cols-m:1"><div class="stat"><span class="num">1 Mio+</span><span class="lbl">Views pro Monat auf Kanälen, die ich schneide</span></div><div class="stat"><span class="num">0 → 200k</span><span class="lbl">Instagram-Follower in 3 Monaten (The Style Consultant)</span></div><div class="stat"><span class="num">1.200+</span><span class="lbl">Shorts &amp; Reels geschnitten</span></div></div>
 
   <section>
-    <h2>Was ihr sucht – was ich mitbringe</h2>
+    <h2>Was du suchst – was ich mitbringe</h2>
     <div class="table">
       <div class="thead"><span>Gesucht</span><span>Mitgebracht</span></div>
-      <div class="row"><div class="need">Short-Form-Erfolg, mit Zahlen belegt</div><div class="have">Bei The Style Consultant war ich ab Kanalstart dabei: Instagram ging in 3 Monaten von fast 0 auf über 200.000 Follower. Heute schneide ich für den deutschen Kanal Der Stilberater (136K Abos auf YouTube).</div></div><div class="row"><div class="need">Die stärksten Momente aus langen Folgen finden</div><div class="have">Für den Schwarz-Digits-Podcast „Tech, KI &amp; Schmetterlinge“ habe ich aus jeder Folge die Clips für Instagram, TikTok und LinkedIn ausgewählt, vom ersten Post an.</div></div><div class="row"><div class="need">Hook in 2 Sekunden, saubere Untertitel, dynamisches Tempo</div><div class="have">Mein Alltag bei über 1.200 Shorts: Hook zuerst, Untertitel im Kanal-Stil, kein Leerlauf.</div></div><div class="row"><div class="need">Hooks, Längen und Formate testen</div><div class="have">Ich schaue mir an, welche Clips laufen, und baue die nächsten danach. Varianten eines Hooks zu testen kostet mich wenig Zeit.</div></div><div class="row"><div class="need">Moderne KI-Tools</div><div class="have">KI gehört bei mir ganz selbstverständlich zur Arbeit. Ich bleibe bei neuen Tools immer auf dem neuesten Stand und setze ein, was mich schneller und besser macht.</div></div><div class="row"><div class="need">Fließend Deutsch</div><div class="have">Muttersprache.</div></div>
+      <div class="row"><div class="need">Short-Form-Erfolg, mit Zahlen belegt</div><div class="have">Bei The Style Consultant war ich ab Kanalstart dabei: Instagram ging in 3 Monaten von fast 0 auf über 200.000 Follower. Heute schneide ich für den deutschen Kanal Der Stilberater (136K Abos auf YouTube).</div></div><div class="row"><div class="need">Die stärksten Momente aus langen Folgen finden</div><div class="have">Für den Schwarz-Digits-Podcast „Tech, KI &amp; Schmetterlinge“ habe ich aus jeder Folge die Clips für Instagram, TikTok und LinkedIn ausgewählt, vom ersten Post an.</div></div><div class="row"><div class="need">Hook in 2 Sekunden, saubere Untertitel, dynamisches Tempo</div><div class="have">Mein Alltag bei über 1.200 Shorts: Hook zuerst, Untertitel im Kanal-Stil, kein Leerlauf.</div></div><div class="row"><div class="need">Moderne KI-Tools</div><div class="have">KI gehört bei mir ganz selbstverständlich zur Arbeit. Ich bleibe bei neuen Tools immer auf dem neuesten Stand und setze ein, was mich schneller und besser macht.</div></div>
     </div>
+    <div class="stats" style="--cols:3;--cols-m:1"><div class="stat"><span class="num">1 Mio+</span><span class="lbl">Views pro Monat auf Kanälen, die ich schneide</span></div><div class="stat"><span class="num">0 → 200k</span><span class="lbl">Instagram-Follower in 3 Monaten (The Style Consultant)</span></div><div class="stat"><span class="num">1.200+</span><span class="lbl">Shorts &amp; Reels geschnitten</span></div></div>
   </section>
 
   
@@ -127,10 +156,10 @@ mark.todo { background:var(--todo-bg); color:var(--todo-fg); border:1.5px dashed
     <div class="cards"><a class="card" href="https://www.instagram.com/techundschmetterlinge/" target="_blank" rel="noopener"><span class="cname">Schwarz Digits</span><span class="csub">Podcast „Tech, KI &amp; Schmetterlinge“: Social-Auftritt von null aufgebaut</span><ul class="tags"><li>Podcast-Clips</li><li>Instagram</li><li>TikTok</li><li>LinkedIn</li></ul><span class="cgo">ansehen ↗</span></a><a class="card" href="https://www.youtube.com/@derstilberater" target="_blank" rel="noopener"><span class="cname">Der Stilberater</span><span class="csub">YouTube-Longform &amp; Shorts für Justus Hansen (136K Abos) · seit 2024</span><ul class="tags"><li>YouTube</li><li>Shorts</li><li>Reels</li><li>TikTok</li></ul><span class="cgo">ansehen ↗</span></a><a class="card" href="https://www.youtube.com/@TheStyleConsultant" target="_blank" rel="noopener"><span class="cname">The Style Consultant</span><span class="csub">Englischer Kanal ab Start: Instagram von fast 0 auf 200k+ in 3 Monaten</span><ul class="tags"><li>YouTube</li><li>Instagram</li><li>EN</li></ul><span class="cgo">ansehen ↗</span></a><a class="card" href="https://open.spotify.com/show/49twRK0zHtLovSES4ZkU3k" target="_blank" rel="noopener"><span class="cname">Feel the News (POV)</span><span class="csub">Podcast-Produktion: Schnitt und Mastering der Folgen</span><ul class="tags"><li>Audioschnitt</li><li>Mastering</li></ul><span class="cgo">ansehen ↗</span></a></div>
   </section>
 
-  <section><h2>Eure Fragen, meine Antworten</h2><div class="qa"><div class="qa-item"><h3>Warum du, warum Bulle &amp; Mensch?</h3><p>Ich schneide seit Jahren Podcasts zu Shorts und finde in einem langen Gespräch den einen Satz, bei dem man hängen bleibt. Euer offener Ton, auch bei dem, was wehtut, ist genau das Material, das auf Shorts funktioniert. Und Bezahlung nach Ergebnis passt zu mir, weil ich sowieso auf Reichweite schneide.</p></div><div class="qa-item"><h3>2–3 Clips oder Kanäle mit Zahlen</h3><ul class="links"><li><a href="https://www.instagram.com/techundschmetterlinge/" target="_blank" rel="noopener">Tech, KI &amp; Schmetterlinge – Instagram (Schwarz Digits)</a></li><li><a href="https://www.youtube.com/@derstilberater/shorts" target="_blank" rel="noopener">Der Stilberater – YouTube Shorts (136K Abos)</a></li><li><a href="https://www.youtube.com/@TheStyleConsultant" target="_blank" rel="noopener">The Style Consultant – YouTube (Instagram von ~0 auf 200k+ in 3 Monaten)</a></li></ul></div><div class="qa-item"><h3>Wöchentliche Verfügbarkeit</h3><p>Clips aus der Sonntagsfolge liefere ich spätestens am Dienstag.</p></div></div></section>
+  <section><h2>Deine Fragen, meine Antworten</h2><div class="qa"><div class="qa-item"><h3>Warum du, warum Bulle &amp; Mensch?</h3><p>Ich sehe großes Potenzial in deinem Content. Was noch fehlt, ist ein klarer, konsistenter Weg, die starken Momente aus deinen Folgen als Clips aufzubereiten: ein Look, den man sofort wiedererkennt, ein Hook in den ersten Sekunden und Grafiken, mit denen auch Leute folgen können, die nicht jeden Tag an der Börse handeln. Genau dafür bin ich da.</p></div><div class="qa-item"><h3>2–3 Clips oder Kanäle mit Zahlen</h3><ul class="links"><li><a href="https://www.instagram.com/techundschmetterlinge/" target="_blank" rel="noopener">Tech, KI &amp; Schmetterlinge – Instagram (Schwarz Digits)</a></li><li><a href="https://www.youtube.com/@derstilberater/shorts" target="_blank" rel="noopener">Der Stilberater – YouTube Shorts (136K Abos)</a></li><li><a href="https://www.youtube.com/@TheStyleConsultant" target="_blank" rel="noopener">The Style Consultant – YouTube (Instagram von ~0 auf 200k+ in 3 Monaten)</a></li></ul></div><div class="qa-item"><h3>Wöchentliche Verfügbarkeit</h3><p>Clips aus der Sonntagsfolge liefere ich spätestens am Dienstag.</p></div></div></section>
 
   <section class="contact" id="kontakt">
-    <h2>Schick mir die nächste Folge. Ich zeig dir, was drinsteckt.</h2>
+    <h2>Sag mir, was du von meinen Clips hältst.</h2>
     <div class="mailrow">
       <span class="mailaddr" id="mail">alessa.wieler@icloud.com</span>
       <button class="btn" type="button" id="copy">Kopieren</button>
